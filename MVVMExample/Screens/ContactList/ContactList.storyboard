@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Contact List View Controller-->
         <scene sceneID="90X-Q3-SLb">
             <objects>
-                <collectionViewController id="KSi-py-JvG" sceneMemberID="viewController">
+                <collectionViewController id="KSi-py-JvG" customClass="ContactListViewController" customModule="MVVMExample" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="kqV-MG-1Mw">
                         <rect key="frame" x="0.0" y="0.0" width="744" height="1133"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

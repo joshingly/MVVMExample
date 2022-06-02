@@ -16,6 +16,11 @@
 		03439B912848E6C1004C2CED /* MVVMExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03439B902848E6C1004C2CED /* MVVMExampleUITestsLaunchTests.swift */; };
 		0383280C2848F098005F0837 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383280B2848F098005F0837 /* Contact.swift */; };
 		038328102848F11A005F0837 /* ContactList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0383280F2848F11A005F0837 /* ContactList.storyboard */; };
+		0383281228490A45005F0837 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383281128490A45005F0837 /* ContactListViewController.swift */; };
+		0383281728490D49005F0837 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0383281628490D49005F0837 /* ContactCell.xib */; };
+		0383281928490D77005F0837 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383281828490D77005F0837 /* ContactCell.swift */; };
+		0383281B2849111B005F0837 /* ContactListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383281A2849111B005F0837 /* ContactListDataSource.swift */; };
+		0383281F2849279F005F0837 /* ContactListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383281E2849279F005F0837 /* ContactListFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		03439B902848E6C1004C2CED /* MVVMExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0383280B2848F098005F0837 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		0383280F2848F11A005F0837 /* ContactList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactList.storyboard; sourceTree = "<group>"; };
+		0383281128490A45005F0837 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		0383281628490D49005F0837 /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
+		0383281828490D77005F0837 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		0383281A2849111B005F0837 /* ContactListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListDataSource.swift; sourceTree = "<group>"; };
+		0383281E2849279F005F0837 /* ContactListFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,9 +156,22 @@
 		0383280E2848F0F7005F0837 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				0383281528490D21005F0837 /* Components */,
 				0383280F2848F11A005F0837 /* ContactList.storyboard */,
+				0383281128490A45005F0837 /* ContactListViewController.swift */,
+				0383281A2849111B005F0837 /* ContactListDataSource.swift */,
+				0383281E2849279F005F0837 /* ContactListFlowLayout.swift */,
 			);
 			path = ContactList;
+			sourceTree = "<group>";
+		};
+		0383281528490D21005F0837 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0383281628490D49005F0837 /* ContactCell.xib */,
+				0383281828490D77005F0837 /* ContactCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0383281728490D49005F0837 /* ContactCell.xib in Resources */,
 				03439B7A2848E6C1004C2CED /* LaunchScreen.storyboard in Resources */,
 				038328102848F11A005F0837 /* ContactList.storyboard in Resources */,
 				03439B772848E6C1004C2CED /* Assets.xcassets in Resources */,
@@ -303,9 +327,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0383281928490D77005F0837 /* ContactCell.swift in Sources */,
 				0383280C2848F098005F0837 /* Contact.swift in Sources */,
 				03439B6E2848E6BF004C2CED /* AppDelegate.swift in Sources */,
+				0383281B2849111B005F0837 /* ContactListDataSource.swift in Sources */,
+				0383281F2849279F005F0837 /* ContactListFlowLayout.swift in Sources */,
 				03439B702848E6BF004C2CED /* SceneDelegate.swift in Sources */,
+				0383281228490A45005F0837 /* ContactListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
