@@ -17,6 +17,7 @@
 		03439B8F2848E6C1004C2CED /* MVVMExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03439B8E2848E6C1004C2CED /* MVVMExampleUITests.swift */; };
 		03439B912848E6C1004C2CED /* MVVMExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03439B902848E6C1004C2CED /* MVVMExampleUITestsLaunchTests.swift */; };
 		0383280C2848F098005F0837 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383280B2848F098005F0837 /* Contact.swift */; };
+		038328102848F11A005F0837 /* ContactList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0383280F2848F11A005F0837 /* ContactList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		03439B8E2848E6C1004C2CED /* MVVMExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMExampleUITests.swift; sourceTree = "<group>"; };
 		03439B902848E6C1004C2CED /* MVVMExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		0383280B2848F098005F0837 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		0383280F2848F11A005F0837 /* ContactList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				03439B782848E6C1004C2CED /* LaunchScreen.storyboard */,
 				03439B7B2848E6C1004C2CED /* Info.plist */,
 				0383280A2848F072005F0837 /* Models */,
+				0383280D2848F0E4005F0837 /* Screens */,
 			);
 			path = MVVMExample;
 			sourceTree = "<group>";
@@ -136,6 +139,22 @@
 				0383280B2848F098005F0837 /* Contact.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0383280D2848F0E4005F0837 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				0383280E2848F0F7005F0837 /* ContactList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		0383280E2848F0F7005F0837 /* ContactList */ = {
+			isa = PBXGroup;
+			children = (
+				0383280F2848F11A005F0837 /* ContactList.storyboard */,
+			);
+			path = ContactList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03439B7A2848E6C1004C2CED /* LaunchScreen.storyboard in Resources */,
+				038328102848F11A005F0837 /* ContactList.storyboard in Resources */,
 				03439B772848E6C1004C2CED /* Assets.xcassets in Resources */,
 				03439B752848E6BF004C2CED /* Main.storyboard in Resources */,
 			);
