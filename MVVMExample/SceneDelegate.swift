@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     window = UIWindow(windowScene: scene)
 
     let storyboard = UIStoryboard(name: "ContactList", bundle: Bundle.main)
-    let vc = storyboard.instantiateInitialViewController()
+    let vc = storyboard.instantiateInitialViewController() as! UINavigationController
 
     window?.rootViewController = vc
     window?.makeKeyAndVisible()
