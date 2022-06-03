@@ -8,4 +8,14 @@
 import Foundation
 import UIKit
 
-class FormPageOneViewController: UIViewController {}
+class FormPageOneViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    setup()
+  }
+
+  func setup() {
+    view.backgroundColor = .magenta
+  }
+}

@@ -8,4 +8,14 @@
 import Foundation
 import UIKit
 
-class FormPageTwoViewController: UIViewController {}
+class FormPageTwoViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    setup()
+  }
+
+  func setup() {
+    view.backgroundColor = .green
+  }
+}
