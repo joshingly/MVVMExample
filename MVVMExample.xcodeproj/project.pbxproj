@@ -159,8 +159,8 @@
 				0383281528490D21005F0837 /* Components */,
 				03C5DA6E284A3F62002F8B72 /* Delegates */,
 				0383280F2848F11A005F0837 /* ContactList.storyboard */,
-				0383281128490A45005F0837 /* ContactListViewController.swift */,
 				0383281A2849111B005F0837 /* ContactListDataSource.swift */,
+				0383281128490A45005F0837 /* ContactListViewController.swift */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
