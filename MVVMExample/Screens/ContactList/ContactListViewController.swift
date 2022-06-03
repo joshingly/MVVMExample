@@ -14,8 +14,8 @@ class ContactListViewController: UICollectionViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    collectionView.dataSource = data
     collectionView.delegate = self
+    collectionView.dataSource = data
     data.registerCells(for: collectionView)
 
     setup()
