@@ -34,5 +34,12 @@ class ContactListViewController: UICollectionViewController {
     )
   }
 
-  @objc func addPressed() { print("pressed") }
+  @objc func addPressed() {
+    let storyboard = UIStoryboard(name: "ContactForm", bundle: Bundle.main)
+    let vc = storyboard.instantiateInitialViewController() as! ContactFormViewController
+
+    vc.modalPresentationStyle = .fullScreen
+
+    present(vc, animated: true)
+  }
 }
