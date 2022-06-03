@@ -15,8 +15,72 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="744" height="1133"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0H-ao-gz8">
+                                <rect key="frame" x="100" y="100" width="79.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Previous"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYc-0L-alW">
+                                <rect key="frame" x="590" y="100" width="54" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRD-0m-KU4">
+                                <rect key="frame" x="100" y="1002" width="68.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQh-uh-G2g">
+                                <rect key="frame" x="588.5" y="1002" width="55.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S0H-ao-gz8" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="100" id="7tx-yN-rd1"/>
+                            <constraint firstAttribute="bottom" secondItem="zQh-uh-G2g" secondAttribute="bottom" constant="100" id="8Rk-DD-eqY"/>
+                            <constraint firstItem="lRD-0m-KU4" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="100" id="AMI-ke-77K"/>
+                            <constraint firstAttribute="trailing" secondItem="PYc-0L-alW" secondAttribute="trailing" constant="100" id="E3I-g5-osA"/>
+                            <constraint firstAttribute="trailing" secondItem="PYc-0L-alW" secondAttribute="trailing" constant="25" id="Pqs-41-u0S"/>
+                            <constraint firstAttribute="trailing" secondItem="zQh-uh-G2g" secondAttribute="trailing" constant="100" id="S5j-my-4gQ"/>
+                            <constraint firstAttribute="bottom" secondItem="lRD-0m-KU4" secondAttribute="bottom" constant="100" id="VYL-AS-QBQ"/>
+                            <constraint firstItem="lRD-0m-KU4" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="25" id="e1v-R3-X9Q"/>
+                            <constraint firstItem="S0H-ao-gz8" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="25" id="frH-dd-uso"/>
+                            <constraint firstItem="PYc-0L-alW" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="100" id="lgQ-lJ-NNm"/>
+                            <constraint firstAttribute="trailing" secondItem="zQh-uh-G2g" secondAttribute="trailing" constant="25" id="odR-Dq-n0d"/>
+                            <constraint firstItem="S0H-ao-gz8" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="100" id="z8m-Bw-B1f"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="frH-dd-uso"/>
+                                <exclude reference="z8m-Bw-B1f"/>
+                                <exclude reference="E3I-g5-osA"/>
+                                <exclude reference="Pqs-41-u0S"/>
+                                <exclude reference="AMI-ke-77K"/>
+                                <exclude reference="e1v-R3-X9Q"/>
+                                <exclude reference="S5j-my-4gQ"/>
+                                <exclude reference="odR-Dq-n0d"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="frH-dd-uso"/>
+                                <include reference="Pqs-41-u0S"/>
+                                <include reference="e1v-R3-X9Q"/>
+                                <include reference="odR-Dq-n0d"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="z8m-Bw-B1f"/>
+                                <include reference="E3I-g5-osA"/>
+                                <include reference="AMI-ke-77K"/>
+                                <include reference="S5j-my-4gQ"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
