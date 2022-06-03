@@ -82,6 +82,12 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="lRD-0m-KU4" id="x6T-EI-e8U"/>
+                        <outlet property="nextButton" destination="PYc-0L-alW" id="3vV-dq-jh2"/>
+                        <outlet property="previousButton" destination="S0H-ao-gz8" id="e8P-KS-iqg"/>
+                        <outlet property="saveButton" destination="zQh-uh-G2g" id="X6I-qw-pM6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
