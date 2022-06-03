@@ -22,12 +22,12 @@ class ContactFormViewController: UIViewController {
     setup()
   }
 
+  func setup() {
+    view.backgroundColor = .lightGray
+  }
+
   @objc func pressPrevious() {}
   @objc func pressNext() {}
   @objc func pressCancel() { self.dismiss(animated: true) }
   @objc func pressSave() {}
-
-  func setup() {
-    view.backgroundColor = .lightGray
-  }
 }
