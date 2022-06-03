@@ -13,8 +13,26 @@ class ContactListViewController: UICollectionViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+
     collectionView.dataSource = data
     collectionView.delegate = self
     data.registerCells(for: collectionView)
+
+    setup()
   }
+
+  func setup() {
+    setupNavBar()
+  }
+
+  func setupNavBar() {
+    navigationItem.title = "Contacts"
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      barButtonSystemItem: .add,
+      target: self,
+      action: #selector(addPressed)
+    )
+  }
+
+  @objc func addPressed() { print("pressed") }
 }
