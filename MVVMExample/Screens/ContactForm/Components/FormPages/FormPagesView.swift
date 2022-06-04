@@ -55,8 +55,8 @@ class FormPagesView: UIScrollView, UIScrollViewDelegate {
     let width = bounds.width
     let height = bounds.height
 
-    for (index, vc) in pages.enumerated() {
-      vc.view.frame = CGRect(x: CGFloat(index) * width, y: 0, width: width, height: height)
+    for (index, page) in pages.enumerated() {
+      page.view.frame = CGRect(x: CGFloat(index) * width, y: 0, width: width, height: height)
     }
 
     contentSize = CGSize(
