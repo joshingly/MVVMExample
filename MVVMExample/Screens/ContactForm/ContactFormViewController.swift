@@ -32,11 +32,6 @@ class ContactFormViewController: UIViewController {
     view.backgroundColor = .lightGray
   }
 
-  override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-    formPagesView.sizePages()
-  }
-
   @objc func pressPrevious() { formPagesView.previousPage() }
   @objc func pressNext() { formPagesView.nextPage() }
   @objc func pressCancel() { dismiss(animated: true) }

@@ -9,24 +9,24 @@ import Foundation
 import UIKit
 
 class FormPagesView: UIScrollView, UIScrollViewDelegate {
-  let pageOne = UIStoryboard(name: "FormPageOne", bundle: Bundle.main)
-    .instantiateInitialViewController() as! FormPageOneViewController
-  let pageTwo = UIStoryboard(name: "FormPageTwo", bundle: Bundle.main)
-    .instantiateInitialViewController() as! FormPageTwoViewController
+  let pages: [UIViewController] = [
+    UIStoryboard(name: "FormPageOne", bundle: Bundle.main)
+      .instantiateInitialViewController() as! FormPageOneViewController,
+    UIStoryboard(name: "FormPageTwo", bundle: Bundle.main)
+      .instantiateInitialViewController() as! FormPageTwoViewController,
+  ]
 
   var currentPage = 1
-  var totalPages = 2
+  var totalPages: Int { pages.count }
   var isScrolling = false
 
   func setup() {
-    showsHorizontalScrollIndicator = false
-    showsVerticalScrollIndicator = false
     isScrollEnabled = false
     isPagingEnabled = false
     delegate = self
 
-    addSubview(pageOne.view)
-    addSubview(pageTwo.view)
+    for page in pages { addSubview(page.view) }
+    setNeedsLayout()
   }
 
   private func scrollTo(page: Int, animated: Bool = true) {
@@ -55,18 +55,25 @@ class FormPagesView: UIScrollView, UIScrollViewDelegate {
     let width = bounds.width
     let height = bounds.height
 
-    pageOne.view.frame = CGRect(x: 0, y: 0, width: width, height: height)
-    pageTwo.view.frame = CGRect(x: width, y: 0, width: width, height: height)
+    for (index, vc) in pages.enumerated() {
+      vc.view.frame = CGRect(x: CGFloat(index) * width, y: 0, width: width, height: height)
+    }
 
     contentSize = CGSize(
       width: width * CGFloat(2),
       height: height
     )
+
     scrollTo(page: currentPage, animated: false)
   }
 
   func scrollViewDidEndScrollingAnimation(_: UIScrollView) {
     isScrolling = false
+    sizePages()
+  }
+
+  override func layoutSubviews() {
+    super.layoutSubviews()
     sizePages()
   }
 }
