@@ -39,6 +39,7 @@ class FormPagesView: UIScrollView, UIScrollViewDelegate {
   func nextPage() {
     if currentPage == totalPages { return }
     if isScrolling { return }
+
     currentPage = currentPage + 1
     scrollTo(page: currentPage)
   }
@@ -46,12 +47,14 @@ class FormPagesView: UIScrollView, UIScrollViewDelegate {
   func previousPage() {
     if currentPage == 1 { return }
     if isScrolling { return }
+
     currentPage = currentPage - 1
     scrollTo(page: currentPage)
   }
 
   func sizePages() {
     if isScrolling { return }
+
     let width = bounds.width
     let height = bounds.height
 
