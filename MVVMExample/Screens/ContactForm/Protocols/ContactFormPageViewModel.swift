@@ -7,4 +7,6 @@
 
 import Foundation
 
-protocol ContactFormPageViewModel {}
+protocol ContactFormPageViewModel {
+  var contact: Contact! { get set }
+}

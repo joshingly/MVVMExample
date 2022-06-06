@@ -20,7 +20,15 @@ class ContactFormViewController: UIViewController {
   }}
   @IBOutlet var saveButton: UIButton!
 
-  @IBOutlet var contactFormPagesView: ContactFormPagesView! { didSet { contactFormPagesView.setup() } }
+  @IBOutlet var contactFormPagesView: ContactFormPagesView! { didSet {
+    contactFormPagesView.viewController = self
+    contactFormPagesView.setup()
+
+    for vc in contactFormPagesView.pages {
+      vc._viewModel.contact = contactForm.contact
+      contactForm.pages.append(vc._viewModel)
+    }
+  } }
 
   var contactForm: ContactFormViewModel!
 

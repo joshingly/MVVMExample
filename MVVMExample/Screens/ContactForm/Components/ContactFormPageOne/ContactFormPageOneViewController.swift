@@ -8,7 +8,10 @@
 import Foundation
 import UIKit
 
-class ContactFormPageOneViewController: UIViewController {
+class ContactFormPageOneViewController: UIViewController, ContactFormPageViewController {
+  var _viewModel: ContactFormPageViewModel! = ContactFormPageOneViewModel()
+  var viewModel: ContactFormPageOneViewModel { _viewModel as! ContactFormPageOneViewModel }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 

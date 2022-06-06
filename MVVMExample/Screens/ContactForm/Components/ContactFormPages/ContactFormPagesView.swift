@@ -9,16 +9,22 @@ import Foundation
 import UIKit
 
 class ContactFormPagesView: UIScrollView, UIScrollViewDelegate {
-  let pages: [UIViewController] = [
+  let pages: [ContactFormPageViewController] = [
     UIStoryboard(name: "ContactFormPageOne", bundle: Bundle.main)
       .instantiateInitialViewController() as! ContactFormPageOneViewController,
     UIStoryboard(name: "ContactFormPageTwo", bundle: Bundle.main)
       .instantiateInitialViewController() as! ContactFormPageTwoViewController,
   ]
 
-  var currentPage = 1
-  var totalPages: Int { pages.count }
   var isScrolling = false
+  weak var viewController: ContactFormViewController! { didSet {
+    contactForm.UIscrollToPage = { [unowned self] page in
+      self.scrollTo(page: page)
+    }
+
+    setNeedsLayout()
+  } }
+  var contactForm: ContactFormViewModel { viewController.contactForm }
 
   func setup() {
     isScrollEnabled = false
@@ -37,19 +43,13 @@ class ContactFormPagesView: UIScrollView, UIScrollViewDelegate {
   }
 
   func nextPage() {
-    if currentPage == totalPages { return }
     if isScrolling { return }
-
-    currentPage = currentPage + 1
-    scrollTo(page: currentPage)
+    contactForm.pageFoward()
   }
 
   func previousPage() {
-    if currentPage == 1 { return }
     if isScrolling { return }
-
-    currentPage = currentPage - 1
-    scrollTo(page: currentPage)
+    contactForm.pageBackward()
   }
 
   func sizePages() {
@@ -67,7 +67,7 @@ class ContactFormPagesView: UIScrollView, UIScrollViewDelegate {
       height: height
     )
 
-    scrollTo(page: currentPage, animated: false)
+    scrollTo(page: contactForm.currentPage, animated: false)
   }
 
   func scrollViewDidEndScrollingAnimation(_: UIScrollView) {
