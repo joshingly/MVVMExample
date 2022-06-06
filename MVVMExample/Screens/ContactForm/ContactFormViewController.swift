@@ -20,7 +20,7 @@ class ContactFormViewController: UIViewController {
   }}
   @IBOutlet var saveButton: UIButton!
 
-  @IBOutlet var formPagesView: FormPagesView! { didSet { formPagesView.setup() } }
+  @IBOutlet var contactFormPagesView: ContactFormPagesView! { didSet { contactFormPagesView.setup() } }
 
   var contactForm: ContactFormViewModel!
 
@@ -34,8 +34,8 @@ class ContactFormViewController: UIViewController {
     view.backgroundColor = .lightGray
   }
 
-  @objc func pressPrevious() { formPagesView.previousPage() }
-  @objc func pressNext() { formPagesView.nextPage() }
+  @objc func pressPrevious() { contactFormPagesView.previousPage() }
+  @objc func pressNext() { contactFormPagesView.nextPage() }
   @objc func pressCancel() { dismiss(animated: true) }
   @objc func pressSave() {}
 }

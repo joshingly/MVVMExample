@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Form Page Two View Controller-->
+        <!--Contact Form Page Two View Controller-->
         <scene sceneID="06G-0V-LgP">
             <objects>
-                <viewController id="3rg-ZC-TZm" customClass="FormPageTwoViewController" customModule="MVVMExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3rg-ZC-TZm" customClass="ContactFormPageTwoViewController" customModule="MVVMExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7OY-o7-yVn">
                         <rect key="frame" x="0.0" y="0.0" width="744" height="1133"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

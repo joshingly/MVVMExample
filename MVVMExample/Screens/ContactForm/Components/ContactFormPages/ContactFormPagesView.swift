@@ -1,5 +1,5 @@
 //
-//  FormPagesView.swift
+//  ContactFormPagesView.swift
 //  MVVMExample
 //
 //  Created by Joshua Antonishen on 6/3/22.
@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-class FormPagesView: UIScrollView, UIScrollViewDelegate {
+class ContactFormPagesView: UIScrollView, UIScrollViewDelegate {
   let pages: [UIViewController] = [
-    UIStoryboard(name: "FormPageOne", bundle: Bundle.main)
-      .instantiateInitialViewController() as! FormPageOneViewController,
-    UIStoryboard(name: "FormPageTwo", bundle: Bundle.main)
-      .instantiateInitialViewController() as! FormPageTwoViewController,
+    UIStoryboard(name: "ContactFormPageOne", bundle: Bundle.main)
+      .instantiateInitialViewController() as! ContactFormPageOneViewController,
+    UIStoryboard(name: "ContactFormPageTwo", bundle: Bundle.main)
+      .instantiateInitialViewController() as! ContactFormPageTwoViewController,
   ]
 
   var currentPage = 1

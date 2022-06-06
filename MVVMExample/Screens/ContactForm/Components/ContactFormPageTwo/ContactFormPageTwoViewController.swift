@@ -1,5 +1,5 @@
 //
-//  FormPageOneViewController.swift
+//  ContactFormPageTwoViewController.swift
 //  MVVMExample
 //
 //  Created by Joshua Antonishen on 6/3/22.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class FormPageOneViewController: UIViewController {
+class ContactFormPageTwoViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -16,6 +16,6 @@ class FormPageOneViewController: UIViewController {
   }
 
   func setup() {
-    view.backgroundColor = .magenta
+    view.backgroundColor = .green
   }
 }
