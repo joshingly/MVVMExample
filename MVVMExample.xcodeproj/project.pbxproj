@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031587BD284E34090018BAEC /* ContactFormPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031587BC284E34090018BAEC /* ContactFormPageViewModel.swift */; };
 		03439B6E2848E6BF004C2CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03439B6D2848E6BF004C2CED /* AppDelegate.swift */; };
 		03439B702848E6BF004C2CED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03439B6F2848E6BF004C2CED /* SceneDelegate.swift */; };
 		03439B772848E6C1004C2CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03439B762848E6C1004C2CED /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		0383281928490D77005F0837 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383281828490D77005F0837 /* ContactCell.swift */; };
 		0383281B2849111B005F0837 /* ContactListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383281A2849111B005F0837 /* ContactListDataSource.swift */; };
 		0383281F2849279F005F0837 /* ContactListFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383281E2849279F005F0837 /* ContactListFlowLayout.swift */; };
+		039CC524284BDD9600824973 /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039CC523284BDD9600824973 /* ContactFormViewModel.swift */; };
 		03C5DA71284A4287002F8B72 /* ContactForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C5DA70284A4287002F8B72 /* ContactForm.storyboard */; };
 		03C5DA73284A42D2002F8B72 /* ContactFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5DA72284A42D2002F8B72 /* ContactFormViewController.swift */; };
 		03C5DA77284A6EAB002F8B72 /* FormPagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5DA76284A6EAB002F8B72 /* FormPagesView.swift */; };
@@ -48,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		031587BC284E34090018BAEC /* ContactFormPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormPageViewModel.swift; sourceTree = "<group>"; };
 		03439B6A2848E6BF004C2CED /* MVVMExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03439B6D2848E6BF004C2CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03439B6F2848E6BF004C2CED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		0383281828490D77005F0837 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		0383281A2849111B005F0837 /* ContactListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListDataSource.swift; sourceTree = "<group>"; };
 		0383281E2849279F005F0837 /* ContactListFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListFlowLayout.swift; sourceTree = "<group>"; };
+		039CC523284BDD9600824973 /* ContactFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModel.swift; sourceTree = "<group>"; };
 		03C5DA70284A4287002F8B72 /* ContactForm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactForm.storyboard; sourceTree = "<group>"; };
 		03C5DA72284A42D2002F8B72 /* ContactFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewController.swift; sourceTree = "<group>"; };
 		03C5DA76284A6EAB002F8B72 /* FormPagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormPagesView.swift; sourceTree = "<group>"; };
@@ -100,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031587BB284E33F60018BAEC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				031587BC284E34090018BAEC /* ContactFormPageViewModel.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		03439B612848E6BF004C2CED = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +201,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		039CC522284BDD7D00824973 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				039CC523284BDD9600824973 /* ContactFormViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		03C5DA6E284A3F62002F8B72 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				03C5DA74284A6E6A002F8B72 /* Components */,
+				031587BB284E33F60018BAEC /* Protocols */,
+				039CC522284BDD7D00824973 /* ViewModels */,
 				03C5DA70284A4287002F8B72 /* ContactForm.storyboard */,
 				03C5DA72284A42D2002F8B72 /* ContactFormViewController.swift */,
 			);
@@ -408,7 +430,9 @@
 				03C5DA77284A6EAB002F8B72 /* FormPagesView.swift in Sources */,
 				0383281B2849111B005F0837 /* ContactListDataSource.swift in Sources */,
 				0383281F2849279F005F0837 /* ContactListFlowLayout.swift in Sources */,
+				039CC524284BDD9600824973 /* ContactFormViewModel.swift in Sources */,
 				03439B702848E6BF004C2CED /* SceneDelegate.swift in Sources */,
+				031587BD284E34090018BAEC /* ContactFormPageViewModel.swift in Sources */,
 				0383281228490A45005F0837 /* ContactListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

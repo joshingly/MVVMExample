@@ -22,6 +22,8 @@ class ContactFormViewController: UIViewController {
 
   @IBOutlet var formPagesView: FormPagesView! { didSet { formPagesView.setup() } }
 
+  var contactForm: ContactFormViewModel!
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
