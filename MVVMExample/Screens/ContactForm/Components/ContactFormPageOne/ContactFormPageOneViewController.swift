@@ -12,6 +12,13 @@ class ContactFormPageOneViewController: UIViewController, ContactFormPageViewCon
   var _viewModel: ContactFormPageViewModel! = ContactFormPageOneViewModel()
   var viewModel: ContactFormPageOneViewModel { _viewModel as! ContactFormPageOneViewModel }
 
+  @IBOutlet var name: MPFormField! { didSet {
+    name.onChange = { [unowned self] value in self.viewModel.name = value }
+  }}
+  @IBOutlet var location: MPFormField! { didSet {
+    location.onChange = { [unowned self] value in self.viewModel.location = value }
+  }}
+
   override func viewDidLoad() {
     super.viewDidLoad()
 

@@ -9,4 +9,7 @@ import Foundation
 
 class ContactFormPageOneViewModel: ContactFormPageViewModel {
   var contact: Contact!
+
+  var name: String = ""
+  var location: String = ""
 }

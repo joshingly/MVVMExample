@@ -22,14 +22,38 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view tag="111" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGa-sa-3Bm" customClass="MPFormField" customModule="MVVMExample" customModuleProvider="target">
+                                <rect key="frame" x="50" y="499.5" width="644" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="gdi-3u-yKp"/>
+                                </constraints>
+                            </view>
+                            <view tag="111" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MNt-0Z-TEA" customClass="MPFormField" customModule="MVVMExample" customModuleProvider="target">
+                                <rect key="frame" x="50" y="549.5" width="644" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="SsW-oi-OqZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9o8-ym-qf5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MNt-0Z-TEA" firstAttribute="centerY" secondItem="jVf-Ph-yHK" secondAttribute="centerY" id="0Cg-CA-7An"/>
+                            <constraint firstItem="UGa-sa-3Bm" firstAttribute="centerY" secondItem="jVf-Ph-yHK" secondAttribute="centerY" constant="-50" id="31b-Db-8nB"/>
+                            <constraint firstItem="UGa-sa-3Bm" firstAttribute="leading" secondItem="jVf-Ph-yHK" secondAttribute="leading" constant="50" id="39Z-AY-WQ7"/>
+                            <constraint firstItem="MNt-0Z-TEA" firstAttribute="leading" secondItem="jVf-Ph-yHK" secondAttribute="leading" constant="50" id="LCK-A7-X5a"/>
+                            <constraint firstAttribute="trailing" secondItem="MNt-0Z-TEA" secondAttribute="trailing" constant="50" id="Psg-IT-daM"/>
                             <constraint firstItem="jvB-cK-YmZ" firstAttribute="top" secondItem="jVf-Ph-yHK" secondAttribute="top" constant="25" id="RDs-aH-Upe"/>
+                            <constraint firstAttribute="trailing" secondItem="UGa-sa-3Bm" secondAttribute="trailing" constant="50" id="RWo-QW-RCl"/>
                             <constraint firstItem="jvB-cK-YmZ" firstAttribute="leading" secondItem="jVf-Ph-yHK" secondAttribute="leading" constant="25" id="hJm-b2-Q9z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="location" destination="MNt-0Z-TEA" id="yFI-Y3-cfl"/>
+                        <outlet property="name" destination="UGa-sa-3Bm" id="WUe-39-5ud"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6o-lt-byM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

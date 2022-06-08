@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0314BDEC28511A3A00D8748D /* MPFormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314BDEB28511A3A00D8748D /* MPFormField.swift */; };
+		0314BDF128511B9500D8748D /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0314BDF028511B9500D8748D /* NibLoadable.swift */; };
 		031587BD284E34090018BAEC /* ContactFormPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031587BC284E34090018BAEC /* ContactFormPageViewModel.swift */; };
 		031587BF284E372B0018BAEC /* ContactFormPageOneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031587BE284E372B0018BAEC /* ContactFormPageOneViewModel.swift */; };
 		031587C1284E37370018BAEC /* ContactFormPageTwoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031587C0284E37370018BAEC /* ContactFormPageTwoViewModel.swift */; };
 		031587C3284E40F90018BAEC /* ContactFormPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031587C2284E40F90018BAEC /* ContactFormPageViewController.swift */; };
+		0319320128512B95007D4795 /* MPFormField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0319320028512B95007D4795 /* MPFormField.xib */; };
 		03439B6E2848E6BF004C2CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03439B6D2848E6BF004C2CED /* AppDelegate.swift */; };
 		03439B702848E6BF004C2CED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03439B6F2848E6BF004C2CED /* SceneDelegate.swift */; };
 		03439B772848E6C1004C2CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03439B762848E6C1004C2CED /* Assets.xcassets */; };
@@ -53,10 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0314BDEB28511A3A00D8748D /* MPFormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPFormField.swift; sourceTree = "<group>"; };
+		0314BDF028511B9500D8748D /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		031587BC284E34090018BAEC /* ContactFormPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormPageViewModel.swift; sourceTree = "<group>"; };
 		031587BE284E372B0018BAEC /* ContactFormPageOneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormPageOneViewModel.swift; sourceTree = "<group>"; };
 		031587C0284E37370018BAEC /* ContactFormPageTwoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormPageTwoViewModel.swift; sourceTree = "<group>"; };
 		031587C2284E40F90018BAEC /* ContactFormPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormPageViewController.swift; sourceTree = "<group>"; };
+		0319320028512B95007D4795 /* MPFormField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPFormField.xib; sourceTree = "<group>"; };
 		03439B6A2848E6BF004C2CED /* MVVMExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03439B6D2848E6BF004C2CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03439B6F2848E6BF004C2CED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +116,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0314BDE928511A0F00D8748D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0314BDEA28511A2700D8748D /* MPFormField */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0314BDEA28511A2700D8748D /* MPFormField */ = {
+			isa = PBXGroup;
+			children = (
+				0314BDEB28511A3A00D8748D /* MPFormField.swift */,
+				0319320028512B95007D4795 /* MPFormField.xib */,
+			);
+			path = MPFormField;
+			sourceTree = "<group>";
+		};
+		0314BDEF28511B7C00D8748D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0314BDF028511B9500D8748D /* NibLoadable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		031587BB284E33F60018BAEC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +178,9 @@
 				03439B762848E6C1004C2CED /* Assets.xcassets */,
 				03439B782848E6C1004C2CED /* LaunchScreen.storyboard */,
 				03439B7B2848E6C1004C2CED /* Info.plist */,
+				0314BDE928511A0F00D8748D /* Components */,
 				0383280A2848F072005F0837 /* Models */,
+				0314BDEF28511B7C00D8748D /* Protocols */,
 				0383280D2848F0E4005F0837 /* Screens */,
 			);
 			path = MVVMExample;
@@ -384,6 +417,7 @@
 				03439B7A2848E6C1004C2CED /* LaunchScreen.storyboard in Resources */,
 				038328102848F11A005F0837 /* ContactList.storyboard in Resources */,
 				03C5DA85284A7E97002F8B72 /* ContactFormPageTwo.storyboard in Resources */,
+				0319320128512B95007D4795 /* MPFormField.xib in Resources */,
 				03C5DA83284A7E8A002F8B72 /* ContactFormPageOne.storyboard in Resources */,
 				03439B772848E6C1004C2CED /* Assets.xcassets in Resources */,
 			);
@@ -431,7 +465,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C5DA7B284A7003002F8B72 /* ContactFormPageOneViewController.swift in Sources */,
+				0314BDEC28511A3A00D8748D /* MPFormField.swift in Sources */,
 				03C5DA7F284A7030002F8B72 /* ContactFormPageTwoViewController.swift in Sources */,
+				0314BDF128511B9500D8748D /* NibLoadable.swift in Sources */,
 				0383281928490D77005F0837 /* ContactCell.swift in Sources */,
 				03C5DA73284A42D2002F8B72 /* ContactFormViewController.swift in Sources */,
 				0383280C2848F098005F0837 /* Contact.swift in Sources */,
