@@ -27,5 +27,9 @@ class ContactFormPageOneViewController: UIViewController, ContactFormPageViewCon
 
   func setup() {
     view.backgroundColor = .magenta
+    viewModel.UIupdateFields = { [unowned self] in
+      self.name.field.text = viewModel.name
+      self.location.field.text = viewModel.location
+    }
   }
 }
