@@ -21,6 +21,8 @@
 		03439B852848E6C1004C2CED /* MVVMExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03439B842848E6C1004C2CED /* MVVMExampleTests.swift */; };
 		03439B8F2848E6C1004C2CED /* MVVMExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03439B8E2848E6C1004C2CED /* MVVMExampleUITests.swift */; };
 		03439B912848E6C1004C2CED /* MVVMExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03439B902848E6C1004C2CED /* MVVMExampleUITestsLaunchTests.swift */; };
+		03609B6928537ED8005F3150 /* Picker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03609B6828537ED8005F3150 /* Picker.storyboard */; };
+		03609B6B28538361005F3150 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03609B6A28538361005F3150 /* PickerViewController.swift */; };
 		0383280C2848F098005F0837 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383280B2848F098005F0837 /* Contact.swift */; };
 		038328102848F11A005F0837 /* ContactList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0383280F2848F11A005F0837 /* ContactList.storyboard */; };
 		0383281228490A45005F0837 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0383281128490A45005F0837 /* ContactListViewController.swift */; };
@@ -74,6 +76,8 @@
 		03439B8A2848E6C1004C2CED /* MVVMExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03439B8E2848E6C1004C2CED /* MVVMExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMExampleUITests.swift; sourceTree = "<group>"; };
 		03439B902848E6C1004C2CED /* MVVMExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		03609B6828537ED8005F3150 /* Picker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Picker.storyboard; sourceTree = "<group>"; };
+		03609B6A28538361005F3150 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		0383280B2848F098005F0837 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		0383280F2848F11A005F0837 /* ContactList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactList.storyboard; sourceTree = "<group>"; };
 		0383281128490A45005F0837 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		0314BDE928511A0F00D8748D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				03609B6728537EC3005F3150 /* Picker */,
 				0314BDEA28511A2700D8748D /* MPFormField */,
 			);
 			path = Components;
@@ -201,6 +206,15 @@
 				03439B902848E6C1004C2CED /* MVVMExampleUITestsLaunchTests.swift */,
 			);
 			path = MVVMExampleUITests;
+			sourceTree = "<group>";
+		};
+		03609B6728537EC3005F3150 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				03609B6828537ED8005F3150 /* Picker.storyboard */,
+				03609B6A28538361005F3150 /* PickerViewController.swift */,
+			);
+			path = Picker;
 			sourceTree = "<group>";
 		};
 		0383280A2848F072005F0837 /* Models */ = {
@@ -414,6 +428,7 @@
 			files = (
 				0383281728490D49005F0837 /* ContactCell.xib in Resources */,
 				03C5DA71284A4287002F8B72 /* ContactForm.storyboard in Resources */,
+				03609B6928537ED8005F3150 /* Picker.storyboard in Resources */,
 				03439B7A2848E6C1004C2CED /* LaunchScreen.storyboard in Resources */,
 				038328102848F11A005F0837 /* ContactList.storyboard in Resources */,
 				03C5DA85284A7E97002F8B72 /* ContactFormPageTwo.storyboard in Resources */,
@@ -469,6 +484,7 @@
 				03C5DA7F284A7030002F8B72 /* ContactFormPageTwoViewController.swift in Sources */,
 				0314BDF128511B9500D8748D /* NibLoadable.swift in Sources */,
 				0383281928490D77005F0837 /* ContactCell.swift in Sources */,
+				03609B6B28538361005F3150 /* PickerViewController.swift in Sources */,
 				03C5DA73284A42D2002F8B72 /* ContactFormViewController.swift in Sources */,
 				0383280C2848F098005F0837 /* Contact.swift in Sources */,
 				031587BF284E372B0018BAEC /* ContactFormPageOneViewModel.swift in Sources */,
