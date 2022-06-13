@@ -132,6 +132,12 @@ class PickerViewController: UIViewController, UISearchBarDelegate, UICollectionV
       target: self,
       action: #selector(cancelPressed)
     )
+    navigationItem.rightBarButtonItem = UIBarButtonItem(
+      title: "Clear",
+      style: .plain,
+      target: self,
+      action: #selector(clearPressed)
+    )
   }
 
   func reloadData(animate: Bool = true) {
@@ -146,9 +152,13 @@ class PickerViewController: UIViewController, UISearchBarDelegate, UICollectionV
   @objc func cancelPressed() {
     if let item = allItems.first(where: { $0.selected }) {
       selectionCallback(.init(id: item.externalId, name: item.value))
-    } else {
-      selectionCallback(nil)
     }
+
+    dismiss(animated: true)
+  }
+
+  @objc func clearPressed() {
+    selectionCallback(nil)
 
     dismiss(animated: true)
   }
