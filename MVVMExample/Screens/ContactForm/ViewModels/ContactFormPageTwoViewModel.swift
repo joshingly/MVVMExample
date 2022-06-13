@@ -9,4 +9,7 @@ import Foundation
 
 class ContactFormPageTwoViewModel: ContactFormPageViewModel {
   var contact: Contact!
+
+  var kindId: String?
+  var birthday: Date?
 }

@@ -54,6 +54,7 @@ class ContactFormPageTwoViewController: UIViewController, ContactFormPageViewCon
     dateFormatter.dateFormat = "dd MMM yyyy"
 
     birthday.field.text = dateFormatter.string(from: birthdayDatePicker.date)
+    viewModel.birthday = birthdayDatePicker.date
     birthdayDatePicker.resignFirstResponder()
     birthday.field.endEditing(true)
   }
@@ -67,7 +68,7 @@ class ContactFormPageTwoViewController: UIViewController, ContactFormPageViewCon
       .init(id: "uuid4", name: "Yet Another"),
       .init(id: "uuid5", name: "Another One"),
     ]
-    let selectedIndex = items.firstIndex(where: { $0.name == kind.field.text })
+    let selectedIndex = items.firstIndex(where: { $0.id == viewModel.kindId })
 
     let vc = PickerViewController.get(
       items: items,
@@ -75,8 +76,10 @@ class ContactFormPageTwoViewController: UIViewController, ContactFormPageViewCon
     ) { [unowned self] option in
       if let option = option {
         self.kind.field.text = option.name
+        self.viewModel.kindId = option.id
       } else {
         self.kind.field.text = ""
+        self.viewModel.kindId = nil
       }
     }
 
