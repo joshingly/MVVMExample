@@ -13,4 +13,9 @@ class ContactFormPageOneViewModel: ContactFormPageViewModel {
 
   var name: String = ""
   var location: String = ""
+
+  func save() {
+    contact.name = name
+    contact.location = location
+  }
 }

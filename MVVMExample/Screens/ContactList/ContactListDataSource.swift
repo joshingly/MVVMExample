@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class ContactListDataSource: NSObject, UICollectionViewDataSource {
-  let contacts: [String] = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven"]
+  var contacts: [Contact] = []
 
   func registerCells(for collectionView: UICollectionView) {
     collectionView.register(
@@ -28,7 +28,7 @@ class ContactListDataSource: NSObject, UICollectionViewDataSource {
       for: indexPath
     ) as! ContactCell
 
-    cell.name.text = contacts[indexPath.row]
+    cell.name.text = contacts[indexPath.row].name
 
     return cell
   }

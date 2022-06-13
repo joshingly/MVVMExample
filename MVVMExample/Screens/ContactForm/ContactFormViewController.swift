@@ -18,7 +18,9 @@ class ContactFormViewController: UIViewController {
   @IBOutlet var cancelButton: UIButton! { didSet {
     cancelButton.addTarget(self, action: #selector(pressCancel), for: .touchUpInside)
   }}
-  @IBOutlet var saveButton: UIButton!
+  @IBOutlet var saveButton: UIButton! { didSet {
+    saveButton.addTarget(self, action: #selector(pressSave), for: .touchUpInside)
+  }}
 
   @IBOutlet var contactFormPagesView: ContactFormPagesView! { didSet {
     contactFormPagesView.viewController = self
@@ -31,6 +33,7 @@ class ContactFormViewController: UIViewController {
   } }
 
   var contactForm: ContactFormViewModel!
+  var onSave: (Contact) -> Void = { _ in }
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -45,5 +48,9 @@ class ContactFormViewController: UIViewController {
   @objc func pressPrevious() { contactFormPagesView.previousPage() }
   @objc func pressNext() { contactFormPagesView.nextPage() }
   @objc func pressCancel() { dismiss(animated: true) }
-  @objc func pressSave() {}
+  @objc func pressSave() {
+    contactForm.save()
+    onSave(contactForm.contact)
+    dismiss(animated: true)
+  }
 }

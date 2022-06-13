@@ -37,6 +37,10 @@ class ContactListViewController: UICollectionViewController {
   @objc func addPressed() {
     let storyboard = UIStoryboard(name: "ContactForm", bundle: Bundle.main)
     let vc = storyboard.instantiateInitialViewController() as! ContactFormViewController
+    vc.onSave = { [unowned self] contact in
+      self.data.contacts.append(contact)
+      self.collectionView.reloadData()
+    }
     vc.contactForm = ContactFormViewModel(Contact())
 
     vc.modalPresentationStyle = .fullScreen

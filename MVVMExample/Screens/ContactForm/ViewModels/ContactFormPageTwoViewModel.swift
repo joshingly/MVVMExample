@@ -10,6 +10,11 @@ import Foundation
 class ContactFormPageTwoViewModel: ContactFormPageViewModel {
   var contact: Contact!
 
-  var kindId: String?
+  var kind: String?
   var birthday: Date?
+
+  func save() {
+    contact.kind = kind
+    contact.birthday = birthday
+  }
 }

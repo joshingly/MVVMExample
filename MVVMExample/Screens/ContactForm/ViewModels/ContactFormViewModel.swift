@@ -38,4 +38,8 @@ class ContactFormViewModel {
     currentPage = currentPage - 1
     UIscrollToPage(currentPage)
   }
+
+  func save() {
+    for page in pages { page.save() }
+  }
 }

@@ -9,4 +9,6 @@ import Foundation
 
 protocol ContactFormPageViewModel {
   var contact: Contact! { get set }
+
+  func save() -> Void
 }

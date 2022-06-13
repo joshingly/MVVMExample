@@ -12,7 +12,7 @@ class Contact {
   var location: String
   var age: Int?
   var birthday: Date?
-  var kind: String
+  var kind: String?
 
   init(
     name: String = "",
