@@ -47,6 +47,15 @@ class ContactFormPageTwoViewController: UIViewController, ContactFormPageViewCon
     let tap = UITapGestureRecognizer(target: self, action: #selector(dismissDatePicker))
     self.view.addGestureRecognizer(tap)
     view.backgroundColor = .green
+    viewModel.UIupdateFields = { [unowned self] in
+      let dateFormatter = DateFormatter()
+      dateFormatter.dateFormat = "dd MMM yyyy"
+
+      if let birthday = self.viewModel.birthday {
+        self.birthday.field.text = dateFormatter.string(from: birthday)
+      }
+      self.kind.field.text = viewModel.kind
+    }
   }
 
   @objc func birthdayChanged() {

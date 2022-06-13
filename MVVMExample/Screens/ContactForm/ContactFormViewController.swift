@@ -29,6 +29,7 @@ class ContactFormViewController: UIViewController {
     for vc in contactFormPagesView.pages {
       vc._viewModel.contact = contactForm.contact
       contactForm.pages.append(vc._viewModel)
+      vc._viewModel.UIupdateFields()
     }
   } }
 

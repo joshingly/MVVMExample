@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+private enum Action {
+  case edit
+  case create
+}
+
 class ContactListViewController: UICollectionViewController {
   let data = ContactListDataSource()
 
@@ -34,14 +39,20 @@ class ContactListViewController: UICollectionViewController {
     )
   }
 
-  @objc func addPressed() {
+  @objc func addPressed() { showForm(for: Contact(), .create) }
+
+  override func collectionView(_: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    showForm(for: data.contacts[indexPath.row], .edit)
+  }
+
+  private func showForm(for contact: Contact, _ action: Action) {
     let storyboard = UIStoryboard(name: "ContactForm", bundle: Bundle.main)
     let vc = storyboard.instantiateInitialViewController() as! ContactFormViewController
     vc.onSave = { [unowned self] contact in
-      self.data.contacts.append(contact)
+      if action == .create { self.data.contacts.append(contact) }
       self.collectionView.reloadData()
     }
-    vc.contactForm = ContactFormViewModel(Contact())
+    vc.contactForm = ContactFormViewModel(contact)
 
     vc.modalPresentationStyle = .fullScreen
 

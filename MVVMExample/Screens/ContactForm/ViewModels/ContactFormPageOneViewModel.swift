@@ -8,7 +8,10 @@
 import Foundation
 
 class ContactFormPageOneViewModel: ContactFormPageViewModel {
-  var contact: Contact!
+  var contact: Contact! { didSet {
+    name = contact.name
+    location = contact.location
+  }}
   var UIupdateFields: () -> Void = {}
 
   var name: String = ""
