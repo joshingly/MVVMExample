@@ -22,14 +22,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view tag="111" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5de-Tv-Up9" customClass="MPFormField" customModule="MVVMExample" customModuleProvider="target">
+                                <rect key="frame" x="50" y="499.5" width="644" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="RoI-Bv-5IW"/>
+                                </constraints>
+                            </view>
+                            <view tag="111" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kNL-aH-Jnf" customClass="MPFormField" customModule="MVVMExample" customModuleProvider="target">
+                                <rect key="frame" x="50" y="549.5" width="644" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="aVX-GV-Yxo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HxQ-EM-JDb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HKn-hS-1bV" firstAttribute="leading" secondItem="7OY-o7-yVn" secondAttribute="leading" constant="25" id="4xu-Ih-jKS"/>
+                            <constraint firstAttribute="trailing" secondItem="5de-Tv-Up9" secondAttribute="trailing" constant="50" id="5rp-IF-M4J"/>
+                            <constraint firstItem="5de-Tv-Up9" firstAttribute="leading" secondItem="7OY-o7-yVn" secondAttribute="leading" constant="50" id="JSe-8Z-E6a"/>
+                            <constraint firstItem="kNL-aH-Jnf" firstAttribute="leading" secondItem="7OY-o7-yVn" secondAttribute="leading" constant="50" id="JqK-dt-xvC"/>
                             <constraint firstItem="HKn-hS-1bV" firstAttribute="top" secondItem="7OY-o7-yVn" secondAttribute="top" constant="25" id="RPF-Ix-YqL"/>
+                            <constraint firstItem="kNL-aH-Jnf" firstAttribute="centerY" secondItem="7OY-o7-yVn" secondAttribute="centerY" id="epb-7n-lPI"/>
+                            <constraint firstItem="5de-Tv-Up9" firstAttribute="centerY" secondItem="7OY-o7-yVn" secondAttribute="centerY" constant="-50" id="rIZ-fQ-m3W"/>
+                            <constraint firstAttribute="trailing" secondItem="kNL-aH-Jnf" secondAttribute="trailing" constant="50" id="ydS-cW-d49"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="birthday" destination="5de-Tv-Up9" id="yei-EY-LEh"/>
+                        <outlet property="kind" destination="kNL-aH-Jnf" id="OZz-Kk-jEs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7k-E9-GwL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
