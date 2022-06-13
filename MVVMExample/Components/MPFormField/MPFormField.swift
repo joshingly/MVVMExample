@@ -9,13 +9,16 @@ import Foundation
 import UIKit
 
 @IBDesignable
-class MPFormField: UIView, NibLoadable {
+class MPFormField: UIView, NibLoadable, UITextFieldDelegate {
   var ibTag: Int = 111
 
-  @IBOutlet var field: UITextField!
+  @IBOutlet var field: UITextField! { didSet {
+    field.delegate = self
+  } }
 
   @IBAction func changed(_: Any) { onChange(field.text ?? "") }
   var onChange = { (_: String) in }
+  var userEditable = true
 
   func setup() {}
 
@@ -26,5 +29,9 @@ class MPFormField: UIView, NibLoadable {
   override func prepareForInterfaceBuilder() {
     makeIBDesignable()
     super.prepareForInterfaceBuilder()
+  }
+
+  func textField(_: UITextField, shouldChangeCharactersIn _: NSRange, replacementString _: String) -> Bool {
+    userEditable
   }
 }
