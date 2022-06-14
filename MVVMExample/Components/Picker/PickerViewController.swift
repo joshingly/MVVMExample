@@ -42,7 +42,9 @@ class PickerViewController: UIViewController, UISearchBarDelegate, UICollectionV
     reloadData(animate: false)
   } }
 
-  private let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Item> { cell, _, item in
+  private let cellRegistration = UICollectionView.CellRegistration<
+    UICollectionViewListCell, Item
+  > { cell, _, item in
     var config = cell.defaultContentConfiguration()
     config.text = item.value
     config.textProperties.color = .black
@@ -54,13 +56,18 @@ class PickerViewController: UIViewController, UISearchBarDelegate, UICollectionV
   }
 
   private lazy var dataSource = {
-    UICollectionViewDiffableDataSource<Section, Item>(collectionView: self.collectionView) { [unowned self]
-      (collectionView: UICollectionView, indexPath: IndexPath, item: Item) -> UICollectionViewCell? in
-        collectionView.dequeueConfiguredReusableCell(
-          using: self.cellRegistration,
-          for: indexPath,
-          item: item
-        )
+    UICollectionViewDiffableDataSource<Section, Item>(
+      collectionView: self.collectionView
+    ) { [unowned self] (
+      collectionView: UICollectionView,
+      indexPath: IndexPath,
+      item: Item
+    ) -> UICollectionViewCell? in
+      collectionView.dequeueConfiguredReusableCell(
+        using: self.cellRegistration,
+        for: indexPath,
+        item: item
+      )
     }
   }()
 
