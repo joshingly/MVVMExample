@@ -148,8 +148,7 @@ class PickerViewController: UIViewController, UISearchBarDelegate, UICollectionV
   }
 
   func reloadData(animate: Bool = true) {
-    var snapshot = dataSource.snapshot()
-    snapshot.deleteAllItems()
+    var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
     snapshot.appendSections([.main])
     snapshot.appendItems(visibleItems, toSection: .main)
 
