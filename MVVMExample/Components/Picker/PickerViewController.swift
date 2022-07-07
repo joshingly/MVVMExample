@@ -126,6 +126,12 @@ class PickerViewController: UIViewController, UISearchBarDelegate, UICollectionV
     super.viewDidLoad()
 
     setup()
+
+    _ = TodosEndpoint.show("1", using: "1234abcd").done { response in
+      print(response.data)
+    }.catch { error in
+      print(error)
+    }
   }
 
   func setup() {
